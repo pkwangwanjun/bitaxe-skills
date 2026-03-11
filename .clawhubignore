@@ -20,5 +20,6 @@ __pycache__/
 .DS_Store
 .claude/
 .agents/
+AGENTS.md
 CLAUDE.md
 skills-lock.json
