@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solo Miner LAN"
+  short_description: "Discover and manage LAN solo miners"
+  default_prompt: "Use $solo-miner-lan to discover Bitaxe or Nerd solo miners on the local network and inspect or update their basic settings."
