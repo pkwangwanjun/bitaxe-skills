@@ -3,7 +3,7 @@ name: bitaxe-skills
 description: Discover, inspect, and manage solo miners on the same local network, with support for Bitaxe and Nerd or NerdAxe devices. Use when Codex or OpenClaw needs to scan a LAN for miner IPs via /api/system/info, extract and record core status fields, answer questions about miner metrics such as best difficulty, hashrate, temperature, pool settings, or uptime, update basic settings via PATCH /api/system, or restart devices via POST /api/system/restart.
 ---
 
-# Solo Miner LAN
+# Bitaxe Skills
 
 ## Overview
 
@@ -13,25 +13,25 @@ Prefer the script over handwritten `curl` when the task involves discovery, fiel
 
 ## Primary Tool
 
-Use [`scripts/solo_miner_tool.py`](./scripts/solo_miner_tool.py) as the default interface.
+Use [`scripts/bitaxe_skills.py`](./scripts/bitaxe_skills.py) as the default interface.
 
 Quick examples:
 
 ```bash
 # Discover miners on the local LAN and save a normalized inventory
-python3 scripts/solo_miner_tool.py discover --save /tmp/solo-miners.json
+python3 scripts/bitaxe_skills.py discover --save /tmp/solo-miners.json
 
 # Probe a specific device and return one metric
-python3 scripts/solo_miner_tool.py show 192.168.28.89 --field bestSessionDiff
+python3 scripts/bitaxe_skills.py show 192.168.28.89 --field bestSessionDiff
 
 # Query the raw JSON from one device
-python3 scripts/solo_miner_tool.py show luckyminer001 --format raw
+python3 scripts/bitaxe_skills.py show luckyminer001 --format raw
 
 # Update a common setting and immediately restart
-python3 scripts/solo_miner_tool.py set luckyminer001 fanspeed=95 --restart
+python3 scripts/bitaxe_skills.py set luckyminer001 fanspeed=95 --restart
 
 # Restart a device
-python3 scripts/solo_miner_tool.py restart 192.168.4.1
+python3 scripts/bitaxe_skills.py restart 192.168.4.1
 ```
 
 ## Workflow

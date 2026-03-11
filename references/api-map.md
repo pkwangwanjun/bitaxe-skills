@@ -1,4 +1,4 @@
-# Solo Miner API Map
+# Bitaxe Skills API Map
 
 ## Source Endpoints
 
